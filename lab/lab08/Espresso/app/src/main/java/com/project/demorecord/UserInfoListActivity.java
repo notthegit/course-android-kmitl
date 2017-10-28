@@ -59,7 +59,6 @@ public class UserInfoListActivity extends AppCompatActivity {
 
     }
     public void Clear (View view){
-
         UserInfoList clean = (UserInfoList) preference.read(UserInfoListActivity.EXTTRA_LIST, UserInfoList.class);
         clean.getUserInfoList().clear();
         adapter.setData(clean.getUserInfoList());
