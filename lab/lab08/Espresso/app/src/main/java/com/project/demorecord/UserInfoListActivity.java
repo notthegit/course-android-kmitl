@@ -1,5 +1,6 @@
 package com.project.demorecord;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -59,12 +60,16 @@ public class UserInfoListActivity extends AppCompatActivity {
 
     }
     public void Clear (View view){
-        UserInfoList clean = (UserInfoList) preference.read(UserInfoListActivity.EXTTRA_LIST, UserInfoList.class);
-        clean.getUserInfoList().clear();
-        adapter.setData(clean.getUserInfoList());
-        adapter.notifyDataSetChanged();
-        preference.save(UserInfoListActivity.EXTTRA_LIST, clean);
-        displaySuggestsList(clean.getUserInfoList());
+        //UserInfoList suggestsList = (UserInfoList) preference.read(UserInfoListActivity.EXTTRA_LIST, UserInfoList.class);
+        //suggestsList.getUserInfoList().clear();
+        //textNotFound.setVisibility(View.VISIBLE);
+        //list.setVisibility(View.GONE);
+        //adapter.setData(suggestsList.getUserInfoList());
+        //adapter.notifyDataSetChanged();
+        //preference.save(UserInfoListActivity.EXTTRA_LIST, suggestsList);
+        preference.save(UserInfoListActivity.EXTTRA_LIST, null);
+        displaySuggestsList(new ArrayList<UserInfo>());
+
     }
 
 }

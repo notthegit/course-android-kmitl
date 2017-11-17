@@ -15,6 +15,10 @@ public class UserInfoList {
 
     private List<UserInfo> userInfoList;
 
+    public void clearList(){
 
+        userInfoList.clear();
+
+    }
 
 }

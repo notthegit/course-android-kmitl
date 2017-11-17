@@ -90,6 +90,7 @@ public class MainActivityTest {
         SystemClock.sleep(1000);
         onView(withRecyclerView(R.id.list).atPositionOnView(0, R.id.textName)).check(matches(withText("Ying")));
         onView(withRecyclerView(R.id.list).atPositionOnView(0, R.id.textAge)).check(matches(withText("20")));
+        onView(allOf(withId(R.id.Clear_list), withText("Clear list"))).perform(click());
     }
 
     // กรอก Name = Ladarat และ Age = 20 กดปุ่ม ADDED และกด GO TO LIST จะต้องเจอ Ladarat อายุ 20 ใน ListView ลำดับที่ 2
@@ -109,6 +110,7 @@ public class MainActivityTest {
         SystemClock.sleep(1000);
         onView(withRecyclerView(R.id.list).atPositionOnView(1, R.id.textName)).check(matches(withText("Ladarat")));
         onView(withRecyclerView(R.id.list).atPositionOnView(1, R.id.textAge)).check(matches(withText("20")));
+        onView(allOf(withId(R.id.Clear_list), withText("Clear list"))).perform(click());
     }
 
     // กรอก Name = Somkait และ Age = 80 กดปุ่ม ADDED และกด GO TO LIST จะต้องเจอ Somkait อายุ 80 ใน ListView ลำดับที่ 3
@@ -131,6 +133,7 @@ public class MainActivityTest {
         SystemClock.sleep(1000);
         onView(withRecyclerView(R.id.list).atPositionOnView(2, R.id.textName)).check(matches(withText("Somkait")));
         onView(withRecyclerView(R.id.list).atPositionOnView(2, R.id.textAge)).check(matches(withText("80")));
+        onView(allOf(withId(R.id.Clear_list), withText("Clear list"))).perform(click());
     }
 
     // กรอก Name = Prayoch และ Age = 60 กดปุ่ม ADDED และกด GO TO LIST จะต้องเจอ Prayoch อายุ 60 ใน ListView ลำดับที่ 4
@@ -156,6 +159,7 @@ public class MainActivityTest {
         SystemClock.sleep(1000);
         onView(withRecyclerView(R.id.list).atPositionOnView(3, R.id.textName)).check(matches(withText("Prayoch")));
         onView(withRecyclerView(R.id.list).atPositionOnView(3, R.id.textAge)).check(matches(withText("60")));
+        onView(allOf(withId(R.id.Clear_list), withText("Clear list"))).perform(click());
     }
 
     // กรอก Name = Prayoch และ Age=50 กดปุ่ม ADDED และกด GO TO LIST จะต้องเจอ Prayoch อายุ 50 ใน ListView ลำดับที่ 5
@@ -184,6 +188,7 @@ public class MainActivityTest {
         SystemClock.sleep(1000);
         onView(withRecyclerView(R.id.list).atPositionOnView(4, R.id.textName)).check(matches(withText("Prayoch")));
         onView(withRecyclerView(R.id.list).atPositionOnView(4, R.id.textAge)).check(matches(withText("50")));
+        onView(allOf(withId(R.id.Clear_list), withText("Clear list"))).perform(click());
     }
 
 }
